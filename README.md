@@ -189,7 +189,7 @@
 ros2 run rokey_project robot_control_node
 ```
 ### 🍓 Raspberry Pi Node
-- 코드: [`feedback_node.py`](./rokcy_project/feedback_node.py)
+- 코드: [`feedback_node.py`](./rokey_project/feedback_node.py)
 
 ```bash
 ros2 run rokey_project feedback_node
