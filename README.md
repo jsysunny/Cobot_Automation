@@ -66,16 +66,13 @@
 
 ### 🏠 퇴근 모드
 
-0. 사용자 item 리스트
-   카드키, 껌, 지갑, 스낵, 텀블러 
-1. 홈 위치 대기
-   Check Force condition 충돌 감지로 대기
-2. 수납 알고리즘 시작 
-   Check Force Condition y축 외력 감지
-5. Good night 인사
-6. 사용자 입력
-7. 해당 위치 탐색 및 물건 꺼내기
-8. 순서대로 꺼낸 뒤 홈 위치 근처에 배치
+0. 사용자 item 리스트 -카드키, 껌, 지갑, 스낵, 텀블러 
+1. 홈 위치 대기 -Check Force condition 충돌 감지로 대기
+2. 수납 알고리즘 시작 - Check Force Condition y축 외력 감지
+3. Good night 인사
+4. 사용자 입력
+5. 해당 위치 탐색 및 물건 꺼내기
+6. 순서대로 꺼낸 뒤 홈 위치 근처에 배치
 
 ### 🏠 퇴근 모드 
 0. 사용자 item 리스트
