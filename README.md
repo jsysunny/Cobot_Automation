@@ -21,14 +21,14 @@
 
 ## 📑 목차
 
-1. [프로젝트 개요](#1--프로젝트-개요)
-2. [구성 요소](#2-🔧-구성-요소)  
-3. [사용 기술](#3-사용-기술)  
-4. [동작 흐름 요약](#4-동작-흐름-요약)  
-5. [코드 실행 방법](#5-코드-실행-방법)  
-6. [시연 영상 / 이미지](#6-시연-영상--이미지)  
-7. [기대 효과](#7-기대-효과)  
-8. [한계점 및 개선점](#8-한계점-및-개선점)
+1. [📌 프로젝트 개요](#1--프로젝트-개요)  
+2. [🔧 구성 요소](#2--구성-요소)  
+3. [💻 사용 기술](#3--사용-기술)  
+4. [🧭 동작 흐름 요약](#4--동작-흐름-요약)  
+5. [💻 코드 실행 방법](#5--코드-실행-방법)  
+6. [📷 시연 영상  이미지](#6--시연-영상--이미지)  
+7. [🌟 기대 효과](#7--기대-효과)  
+8. [⚠️ 한계점 및 개선점](#8--한계점-및-개선점)
    
 &nbsp;
 ## 1. 📌 프로젝트 개요
@@ -92,12 +92,12 @@ Ubuntu 22.04 (ROS2 humble)
 | 🎮 인터페이스 | 사용자 입력 기반 물품 선택 |
 | 🖥 디스플레이/음성 | Raspberry Pi + LCD + 음성 출력 |
 
-
+&nbsp;
 ## 4. 🧭 동작 흐름 요약
 <img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
 <img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
-
+&nbsp;
 ### 🏠 퇴근 모드
 
 0. **사용자 아이템 리스트**  
@@ -145,7 +145,7 @@ Ubuntu 22.04 (ROS2 humble)
    - 📺 LCD 출력: `"Request complete"`  
    - 💬 음성 출력: `"Request complete"`
 
-
+&nbsp;
 ### 🚪 출근 모드
 0. **홈 위치 대기**  
    - Force 센서를 활용해 충돌 감지 상태에서 대기
@@ -179,7 +179,7 @@ Ubuntu 22.04 (ROS2 humble)
    - 📺 LCD 출력: `"Request complete"`  
    - 💬 음성 출력: `"Request complete"`
 
-
+&nbsp;
 ## 5. 💻 코드 실행 방법
 
 ### 🤖 Robot Control Node
@@ -187,13 +187,14 @@ Ubuntu 22.04 (ROS2 humble)
 
 ```bash
 ros2 run rokey_project robot_control_node
-
+```
 ### 🍓 Raspberry Pi Node
 - 코드: [`feedback_node.py`](./rokcy_project/feedback_node.py)
 
 ```bash
 ros2 run rokey_project feedback_node
-
+```
+&nbsp;
 ## 6. 📷 시연 영상 / 이미지
 
 > 
