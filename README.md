@@ -16,7 +16,7 @@
 
 ### 🏭 기존 기술의 활용과 협동로봇의 확장 가능성
 
--선반 정리 및 물품 수납 작업은 기존에는 주로 **대형 산업용 로봇**을 활용한 자동화 시스템에서 사용되어 왔습니다.
+- 선반 정리 및 물품 수납 작업은 기존에는 주로 **대형 산업용 로봇**을 활용한 자동화 시스템에서 사용되어 왔습니다.
     예: **물류창고**에서는 로봇이 선반에서 물건을 꺼내 배송 구역으로 운반하는 자동 피킹 시스템
     예: **생산현장**에서는 부품을 정리하거나 공급하기 위해 고정형 로봇팔이 정해진 경로를 따라 반복 작업을 수행
 
@@ -45,6 +45,8 @@
 - **LCD**: 현재 동작 상태 및 사용자 입력 정보를 시각적으로 제공
 - **스피커**: 음성 안내를 통해 사용자와의 직관적인 인터랙션 제공
 
+<img width="600" height="987" alt="image" src="https://github.com/user-attachments/assets/ed44d43f-d51c-4f3a-9cf1-d87ee4a7d610" />
+<img width="600" height="1152" alt="image" src="https://github.com/user-attachments/assets/b40a74ce-2068-4d40-a3bb-8301a27129e8" />
 
 ## 💻 사용 기술
 
@@ -77,22 +79,48 @@
 
 카드키, 껌, 지갑, 스낵 ,텀블러
 
+
 1. 홈 위치에서 대기
 <img width="260" height="346" alt="image" src="https://github.com/user-attachments/assets/592f87d1-6cda-4c07-87df-9a774a617464" />
 
 Check Force condition 충돌 감지로 대기
+
 
 2. 수납 알고리즘 시작
 <img width="389" height="318" alt="image" src="https://github.com/user-attachments/assets/a69dd018-1732-4767-8c76-d99396501a35" />
 
 Check Force Condition y축 외력 감지
 
+
 3. Good night 인사
 <img width="275" height="369" alt="image" src="https://github.com/user-attachments/assets/069d4474-151b-4545-9a5f-70c2cb5bc17e" />
 
 Move_periodic
 
-4.
+
+4.사용자 입력
+<img width="496" height="261" alt="image" src="https://github.com/user-attachments/assets/0af93419-7272-4ce1-8b72-a4e89dddaea3" />
+User input으로 원하는 물체와 선반 위치 입력 ex) tumblr 1
+
+
+5.물체탐색 
+<img width="717" height="957" alt="image" src="https://github.com/user-attachments/assets/8cf99b8c-823c-45f3-b794-aedc0ef681d2" />
+ㄹ 구조 탐색 반복
+Movel x축 으로 400m 탐색
+Movel y축으로 50m 탐색
+
+
+6. Item 종류 파악 및 Grip
+<img width="520" height="342" alt="image" src="https://github.com/user-attachments/assets/c6d4e199-9161-46bc-b814-12d3c59f2d16" />
+1.비동기로 물품 탐색 중 Get tool force로 외력 감지 -> 물체 존재 파악
+
+2.순응제어로 z축 위치 파악
+-> 물체 분류(height_dict에 있는 물체 높이와 z 축 위치 비교 ) 
+
+3. Release 후  물체 grip
+
+
+7.
 ### 🚪 출근 모드
 
 1. 홈 위치 대기 → 외력 감지
