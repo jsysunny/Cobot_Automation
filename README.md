@@ -15,7 +15,18 @@
 > 공식 자료는 [두산로보틱스 홈페이지](https://www.doosanrobotics.com/) 및  
 > [Doosan GitHub 저장소](https://github.com/DoosanRobotics/doosan-robot2)를 참고해 주세요.
 
-## 📌 프로젝트 개요
+## 📑 목차
+
+1. [📌 프로젝트 개요](#1-프로젝트-개요)  
+2. [🔧 구성 요소](#2-구성-요소)  
+3. [💻 사용 기술](#3-사용-기술)  
+4. [🧭 동작 흐름 요약](#4-동작-흐름-요약)  
+5. [💻 코드 실행 방법](#5-코드-실행-방법)  
+6. [📷 시연 영상 / 이미지](#6-시연-영상--이미지)  
+7. [🌟 기대 효과](#7-기대-효과)  
+8. [⚠️ 한계점 및 개선점](#8-한계점-및-개선점)  
+
+## 1. 📌 프로젝트 개요
 
 출근과 퇴근 시간은 하루 중 반복적인 행동이 몰리는 시간대입니다. 특히 개인 물품을 정리하고 챙기는 과정은 작지만 꾸준한 시간 소모와 불편함을 야기합니다.  
 이 프로젝트는 협동로봇(cobot)을 활용하여 **출근 전 물품 꺼내기**와 **퇴근 후 물품 정리/수납**을 자동화하는 시스템입니다.
@@ -54,7 +65,7 @@
   협동로봇을 활용한 차세대 산업 자동화의 새로운 방향성을 함께 보여주는 사례라 할 수 있습니다.
 
 
-## 🔧 구성 요소
+## 2. 🔧 구성 요소
 
 - **협동로봇 Doosan M0609**: 선반 간 이동 및 물건 그리핑
 - **Raspberry Pi4 4gb**: 로봇과 LCD,스피커 간 통신 및 제어를 위한 마이크로컨트롤러
@@ -64,7 +75,7 @@
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/ed44d43f-d51c-4f3a-9cf1-d87ee4a7d610" /> <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b40a74ce-2068-4d40-a3bb-8301a27129e8" />
 
 
-## 💻 사용 기술
+## 3. 💻 사용 기술
 
 | 기술 | 내용 |
 |------|------|
@@ -75,7 +86,7 @@
 | 🖥 디스플레이/음성 | Raspberry Pi + LCD + 음성 출력 |
 
 
-## 🧭 동작 흐름 요약
+## 4. 🧭 동작 흐름 요약
 <img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
 <img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
@@ -162,19 +173,25 @@
    - 💬 음성 출력: `"Request complete"`
 
 
-## 💻 코드 실행 방법
+## 5. 💻 코드 실행 방법
 
 ### 🤖 Robot Control Node
-- 코드: [`robot_control_node.py`](./rokcy_project/robot_control_node.py)
+- 코드: [`robot_control_node.py`](./rokey_project/robot_control_node.py)
 
 ```bash
 ros2 run rokey_project robot_control_node
 
-## 📷 시연 영상 / 이미지
+### 🍓 Raspberry Pi Node
+- 코드: [`feedback_node.py`](./rokcy_project/feedback_node.py)
+
+```bash
+ros2 run rokey_project feedback_node
+
+## 6. 📷 시연 영상 / 이미지
 
 > 
 
-## 🌟 기대 효과
+## 7. 🌟 기대 효과
 
 - 일상생활에 협동로봇 도입 가능성 증진
 - 출퇴근 시간의 불편함 해소
@@ -182,7 +199,7 @@ ros2 run rokey_project robot_control_node
 
 ---
 
-## ⚠️ 한계점 및 개선점
+### ⚠️ 한계점 및 개선점
 
 - 그리퍼 힘 조절 미흡 → 물체 밀림 발생
 - 선반 높이 제한 → 워크스페이스 조정 필요
