@@ -84,9 +84,9 @@
 
 | 기술 | 내용 |
 |------|------|
-Ubuntu 22.04 (ROS2 humble)
-| 💬 언어 | Python, DSR
- Middleware 통신 ? ROS2|
+| 💻 OS 및 환경 | Ubuntu 22.04, ROS2 Humble |
+| 💬 사용 언어 | Python, DSR |
+| 🔗 통신 미들웨어 | ROS2 (Publisher / Subscriber 기반 노드 통신) |
 | 🧠 제어 플랫폼 | ROS2 기반 제어 알고리즘 |
 | 🧪 순응제어 | Force 센서를 활용한 충돌 감지 및 위치 파악 |
 | 🎮 인터페이스 | 사용자 입력 기반 물품 선택 |
