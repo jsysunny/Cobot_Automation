@@ -61,16 +61,35 @@
 <img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
 <img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
-### 🚪 출근 모드
-<img width="396" height="290" alt="image" src="https://github.com/user-attachments/assets/a6c9f79a-d143-4916-855f-19c53533b285" />
-
-1. 홈 위치 대기 → 외력 감지
-2. 인사 (`Hello!`)
-3. 사용자 입력 (예: `텀블러 1`)
-4. 해당 위치 탐색 및 물건 꺼내기
-5. 순서대로 꺼낸 뒤 홈 위치 근처에 배치
-
 ### 🏠 퇴근 모드
+
+0. 사용자 item 리스트
+1. 홈 위치 대기
+2. 수납 알고리즘 시작
+3. Good night 인사
+4. 사용자 입력
+5. 해당 위치 탐색 및 물건 꺼내기
+6. 순서대로 꺼낸 뒤 홈 위치 근처에 배치
+
+### 🏠 퇴근 모드 
+0. 사용자 item 리스트
+<img width="401" height="292" alt="image" src="https://github.com/user-attachments/assets/6360b4dd-6c37-4f63-9154-fb5ed3737369" />
+카드키, 껌, 지갑, 스낵 ,텀블러
+
+1. 홈 위치에서 대기
+<img width="260" height="346" alt="image" src="https://github.com/user-attachments/assets/592f87d1-6cda-4c07-87df-9a774a617464" />
+Check Force condition 충돌 감지로 대기
+
+2. 수납 알고리즘 시작
+<img width="389" height="318" alt="image" src="https://github.com/user-attachments/assets/a69dd018-1732-4767-8c76-d99396501a35" />
+Check Force Condition y축 외력 감지
+
+3. Good night 인사
+<img width="275" height="369" alt="image" src="https://github.com/user-attachments/assets/069d4474-151b-4545-9a5f-70c2cb5bc17e" />
+Move_periodic
+
+4.
+### 🚪 출근 모드
 
 1. 홈 위치 대기 → 외력 감지
 2. 인사 (`Good Night`)
@@ -79,6 +98,7 @@
 5. 비어있는 위치에 수납 (stacked 상태 고려)
 6. 수납 완료 후 홈 위치 복귀
 
+### 🚪 출근 모드 상세 
 ---
 
 
