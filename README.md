@@ -37,7 +37,7 @@
 - 따라서 본 프로젝트는 기존 산업용 기술의 일상화를 실현함과 동시에,  
   협동로봇을 활용한 차세대 산업 자동화의 새로운 방향성을 함께 보여주는 사례라 할 수 있습니다.
 
----
+
 ## 🔧 구성 요소
 
 - **협동로봇 Doosan M0609**: 선반 간 이동 및 물건 그리핑
@@ -56,10 +56,10 @@
 | 🎮 인터페이스 | 사용자 입력 기반 물품 선택 |
 | 🖥 디스플레이/음성 | Raspberry Pi + LCD + 음성 출력 |
 
----
 
 ## 🧭 동작 흐름 요약
 <img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
+<img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
 ### 🚪 출근 모드
 
