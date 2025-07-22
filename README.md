@@ -87,8 +87,8 @@
 | 💻 OS 및 환경 | Ubuntu 22.04, ROS2 Humble |
 | 💬 사용 언어 | Python, DSR |
 | 🔗 통신 미들웨어 | ROS2 (Publisher / Subscriber 기반 노드 통신) |
-| 🧠 제어 플랫폼 | ROS2 기반 제어 알고리즘 |
-| 🧪 순응제어 | Force 센서를 활용한 충돌 감지 및 위치 파악 |
+| 🧪 순응제어 | Doosan M0609 Force 센서를 활용한 충돌 감지 및 위치 파악 |
+| 🧠 서브 제어 컨트롤러 | Raspberry Pi (로컬 ROS2 노드 실행 및 장치 제어) |
 | 🎮 인터페이스 | 사용자 입력 기반 물품 선택 |
 | 🖥 디스플레이/음성 | Raspberry Pi + LCD + 음성 출력 |
 
