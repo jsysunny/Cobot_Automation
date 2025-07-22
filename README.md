@@ -1,7 +1,7 @@
 # Doosan Robotics Boot Camp(2025.01.06 ~ 2025.07.06)
 ## 1. ROKEY B-1조 협동-1 Project (ROS2를 활용한 로봇 자동화 공정 시스템 구현 프로젝트) Cobot_Automation
 &nbsp;
-## 🧠 미라클 모닝: 협동로봇 기반 스마트 출·퇴근 물품 관리 시스템
+## 🧠 미라클 모닝 앤 굿 나잇: 협동로봇 기반 스마트 출·퇴근 물품 관리 시스템
 
 
 &nbsp;
