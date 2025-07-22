@@ -3,16 +3,19 @@
 
 # 🧠 미라클 모닝: 협동로봇 기반 스마트 출·퇴근 물품 관리 시스템
 
+
 ## 📌 프로젝트 개요
 
 출근과 퇴근 시간은 하루 중 반복적인 행동이 몰리는 시간대입니다. 특히 개인 물품을 정리하고 챙기는 과정은 작지만 꾸준한 시간 소모와 불편함을 야기합니다.  
 이 프로젝트는 협동로봇(cobot)을 활용하여 **출근 전 물품 꺼내기**와 **퇴근 후 물품 정리/수납**을 자동화하는 시스템입니다.
+
 
 ### 🎯 기획 의도
 
 - 출근과 퇴근 과정에서 반복적으로 수행되는 **선반 정리 및 수납 작업을 자동화**하고자 했습니다.
 - 사용자의 물품 목록을 기반으로, 로봇이 물건을 대신 꺼내주거나 정리해줌으로써 **일상 속 편의성 향상**을 목표로 합니다.
 - 이는 단순한 시간 절약을 넘어, **일상 루틴에서의 스트레스 감소**와 **사용자 경험 개선**으로 이어집니다.
+
 
 ### 🏭 기존 기술의 활용과 협동로봇의 확장 가능성
 
@@ -49,6 +52,7 @@
 
 <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/ed44d43f-d51c-4f3a-9cf1-d87ee4a7d610" /> <img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/b40a74ce-2068-4d40-a3bb-8301a27129e8" />
 
+
 ## 💻 사용 기술
 
 | 기술 | 내용 |
@@ -64,6 +68,7 @@
 <img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
 <img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
+
 ### 🏠 퇴근 모드
 
 0. **사용자 아이템 리스트**  
@@ -72,64 +77,79 @@
 1. **홈 위치 대기**  
    - Force 센서를 활용해 충돌 감지 상태에서 대기
 
-2. **수납 알고리즘 시작**
-   - y축 방향 외력 감지 (Check Force Condition) → 수납 알고리즘 진입
-   - good night! Have a sweet dream 음성 재생 good night! Lcd 화면 표기
-     
-3. **인사 동작(Good night)**  
-   - `Move_periodic` 동작으로 인사 수행
-   - `"Good night!"` 음성 및 LCD 출력  
+2. **수납 알고리즘 시작**  
+   - y축 방향 외력 감지 (Check Force Condition) → 수납 알고리즘 진입  
+   - 💬 음성 출력: `"Good night! Have a sweet dream"`  
+   - 📺 LCD 출력: `good night!`
+
+3. **인사 동작 (Good night)**  
+   - `Move_periodic` 동작으로 인사 수행  
+   - 💬 음성 출력: `"Good night!"`  
+   - 📺 LCD 출력: `"Good night!"`
 
 4. **사용자 입력**  
    - 원하는 물체 및 선반 위치 입력  
    - 예: `텀블러 1`
 
 5. **물체 탐색**  
-   - ㄹ자 구조로 반복 탐색  
-     - Movel 명령을 통해 x축 400mm, y축 50mm 탐색
-   - Searching lcd 화면 표시 Gage 애니메이션
+   - ㄹ자 구조로 반복 탐색 수행  
+     - Movel 명령으로 x축 400mm, y축 50mm 탐색  
+   - 📺 LCD 출력: `"Searching"` Gage 애니메이션 표시
 
 6. **물체 분류 및 Grip 동작**  
-   - 비동기 물품 탐색 중 `Get tool force`로 외력 감지 → 물체 존재 확인  
-   - 순응제어로 z축 위치 파악 후 `height_dict`와 비교하여 분류  
+   - 비동기 탐색 중 `Get tool force`로 외력 감지 → 물체 존재 확인  
+   - 📺 LCD 출력: `"grabbed object!: {Detected name}"`  
+   - 💬 음성 출력: `{Detected name}`  
+   - 순응제어로 z축 위치 파악 → `height_dict`와 비교하여 분류  
    - `Release` → `Grip` 동작으로 물체 집기
 
 7. **입력 위치에 물품 수납**  
    - **비어있는 경우**: 원래 위치 (`placed_list`)에 수납  
    - **이미 물건이 있는 경우**:  
      - 예: `stacked = [1, 0, 0, 0]` → `stacked = [2, 0, 0, 0]`  
-     - x축으로 떨어진 지점에 수납
+     - x축으로 떨어진 지점에 수납  
+   - 📺 LCD 출력: `"Placed object: {Detected name}"`  
+   - 💬 음성 출력: `{Detected name}`
 
 8. **그리퍼 홈 위치 복귀**  
-   - 물체 수납 후, 그리퍼가 홈으로 이동하여 대기 상태 복귀
+   - 수납 완료 후, 그리퍼가 홈 위치로 이동하여 대기  
+   - 📺 LCD 출력: `"Request complete"`  
+   - 💬 음성 출력: `"Request complete"`
+
 
 ### 🚪 출근 모드
-1. **홈 위치 대기**  
+0. **홈 위치 대기**  
    - Force 센서를 활용해 충돌 감지 상태에서 대기
 
-2. **꺼내기 알고리즘 시작**  
-   - x축 방향 외력 감지 (Check Force Condition) → 꺼내기 알고리즘 진입
+1. **꺼내기 알고리즘 시작**  
+   - x축 방향 외력 감지 (Check Force Condition) → 꺼내기 알고리즘 진입  
+   - 💬 음성 출력: `"Have a nice day!"`  
+   - 📺 LCD 출력: `"Hello, Have a nice day!"`
 
-3. **인사 동작 (Hello)**  
-   - `"Hello!"` 음성 및 LCD 출력  
-   - `Move_periodic` 동작으로 인사 수행
+2. **인사 동작 (Hello)**  
+   - `Move_periodic` 동작으로 인사 수행  
+   - 💬 음성 출력: `"Hello!"`  
+   - 📺 LCD 출력: `"Hello!"`
 
-4. **사용자 입력**  
+3. **사용자 입력**  
    - 원하는 물체 및 선반 위치 입력  
    - 예: `텀블러 1`
 
-5. **물품 위치 비교 및 꺼내기**  
-   - **적재된 물품 및 위치**가 **입력값과 일치할 경우**  
-     → 해당 위치에서 물건 꺼내기  
-   - **불일치할 경우**  
-     → 꺼내기 동작 수행하지 않음
+4. **물품 위치 비교 및 꺼내기**  
+   - **입력값과 위치가 일치하는 경우** → 해당 위치에서 물건 꺼냄  
+     - 📺 LCD 출력: `{Detected name} out`  
+     - 💬 음성 출력: `{Detected name}`  
+   - **불일치하는 경우** → 동작 수행하지 않음
 
-6. **꺼낸 물품 배치**  
-   - 최대 5개까지 꺼낼 수 있으며,  
-     입력된 순서대로 홈 위치에서 특정 위치만큼 떨어진 지점에 배치
+5. **꺼낸 물품 배치**  
+   - 최대 5개까지 꺼낼 수 있음  
+   - 입력된 순서대로, 홈 위치에서 일정 간격으로 떨어진 위치에 배치
 
-7. **그리퍼 홈 위치 복귀**  
-   - 모든 꺼내기 완료 후, 그리퍼가 홈 위치로 복귀
+6. **그리퍼 홈 위치 복귀**  
+   - 꺼내기 완료 후, 그리퍼가 홈 위치로 복귀  
+   - 📺 LCD 출력: `"Request complete"`  
+   - 💬 음성 출력: `"Request complete"`
+
 
 ## 📷 시연 영상 / 이미지
 
