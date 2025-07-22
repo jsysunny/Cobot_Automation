@@ -59,7 +59,7 @@
 ---
 
 ## 🧭 동작 흐름 요약
-<img width="1047" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
+<img width="600" height="224" alt="image" src="https://github.com/user-attachments/assets/f9b3e453-4a83-46d6-85bd-8abab347f9d9" />
 
 ### 🚪 출근 모드
 
