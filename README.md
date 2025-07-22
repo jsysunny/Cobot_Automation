@@ -197,10 +197,14 @@ ros2 run rokey_project feedback_node
 &nbsp;
 ## 6. 📷 시연 영상 / 이미지
 > https://youtu.be/bbBvETzXTgY
+
 > <img width="600" height="415" alt="image" src="https://github.com/user-attachments/assets/52fde78e-1d48-4131-9ba5-a52d8baa4287" />
+
 > <img width="600" height="415" alt="image" src="https://github.com/user-attachments/assets/24839a30-8b8b-4170-aeda-596b4a016ea2" />
+
 > <img width="600" height="392" alt="image" src="https://github.com/user-attachments/assets/a3af83a5-ea75-4e62-b817-4eddd1cb01de" />
-> <img width="600" height="392" alt="image" src="https://github.com/user-attachments/assets/bfb44ccb-1988-4563-abb9-64399405e04d" />
+
+> <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/bfb44ccb-1988-4563-abb9-64399405e04d" />
 
 
 &nbsp;
