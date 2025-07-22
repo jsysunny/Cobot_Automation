@@ -69,45 +69,17 @@
 0. 사용자 item 리스트 -카드키, 껌, 지갑, 스낵, 텀블러 
 1. 홈 위치 대기 -Check Force condition 충돌 감지로 대기
 2. 수납 알고리즘 시작 - Check Force Condition y축 외력 감지
-3. Good night 인사
-4. 사용자 입력
-5. 해당 위치 탐색 및 물건 꺼내기
-6. 순서대로 꺼낸 뒤 홈 위치 근처에 배치
+3. Good night 인사 - Move_periodic
+4. 사용자 입력 - User input으로 원하는 물체와 선반 위치 입력 ex) tumblr 1
+5. 물체 탐색 - ㄹ 구조 탐색 반복 / Movel x축 으로 400m 탐색 / Movel y축으로 50m 탐색
+6. Item 종류 파악 및 Grip  - 비동기로 물품 탐색 중 Get tool force로 외력 감지 -> 물체 존재 파악
+순응제어로 z축 위치 파악 -> 물체 분류(height_dict에 있는 물체 높이와 z 축 위치 비교 ) 
+Release 후  물체 grip
+
 
 ### 🏠 퇴근 모드 
 0. 사용자 item 리스트
-<img width="401" height="292" alt="image" src="https://github.com/user-attachments/assets/6360b4dd-6c37-4f63-9154-fb5ed3737369" />
 
-카드키, 껌, 지갑, 스낵 ,텀블러
-
-1. 홈 위치에서 대기
-<img width="260" height="346" alt="image" src="https://github.com/user-attachments/assets/592f87d1-6cda-4c07-87df-9a774a617464" />
-
-Check Force condition 충돌 감지로 대기
-
-2. 수납 알고리즘 시작
-<img width="389" height="318" alt="image" src="https://github.com/user-attachments/assets/a69dd018-1732-4767-8c76-d99396501a35" />
-
-Check Force Condition y축 외력 감지
-
-3. Good night 인사
-<img width="275" height="369" alt="image" src="https://github.com/user-attachments/assets/069d4474-151b-4545-9a5f-70c2cb5bc17e" />
-
-Move_periodic
-
-4.사용자 입력
-
-<img width="400" height="261" alt="image" src="https://github.com/user-attachments/assets/0af93419-7272-4ce1-8b72-a4e89dddaea3" />
-
-User input으로 원하는 물체와 선반 위치 입력 ex) tumblr 1
-
-5.물체탐색 
-
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/8cf99b8c-823c-45f3-b794-aedc0ef681d2" />
-
-ㄹ 구조 탐색 반복
-Movel x축 으로 400m 탐색
-Movel y축으로 50m 탐색
 
 6. Item 종류 파악 및 Grip
 <img width="400" height="342" alt="image" src="https://github.com/user-attachments/assets/c6d4e199-9161-46bc-b814-12d3c59f2d16" />
