@@ -95,11 +95,13 @@ Check Force Condition y축 외력 감지
 Move_periodic
 
 4.사용자 입력
+
 <img width="496" height="261" alt="image" src="https://github.com/user-attachments/assets/0af93419-7272-4ce1-8b72-a4e89dddaea3" />
 
 User input으로 원하는 물체와 선반 위치 입력 ex) tumblr 1
 
 5.물체탐색 
+
 <img width="717" height="957" alt="image" src="https://github.com/user-attachments/assets/8cf99b8c-823c-45f3-b794-aedc0ef681d2" />
 
 ㄹ 구조 탐색 반복
