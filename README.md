@@ -196,7 +196,8 @@ ros2 run rokey_project feedback_node
 ```
 &nbsp;
 ## 6. 📷 시연 영상 / 이미지
-> 
+> https://youtu.be/bbBvETzXTgY
+> https://www.youtube.com/watch?v=bbBvETzXTgY
 &nbsp;
 ## 7. 🌟 기대 효과
 
