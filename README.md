@@ -62,6 +62,7 @@
 <img width="600" height="1463" alt="image" src="https://github.com/user-attachments/assets/059756fc-f98b-4823-a8c3-b05fa19cbf83" />
 
 ### 🚪 출근 모드
+<img width="396" height="290" alt="image" src="https://github.com/user-attachments/assets/a6c9f79a-d143-4916-855f-19c53533b285" />
 
 1. 홈 위치 대기 → 외력 감지
 2. 인사 (`Hello!`)
@@ -101,7 +102,7 @@
 
 ## 🙌 팀원
 
-- 백홍하, 서형원, 정민섭, 정서윤
+- 백홍하,정서윤,정민섭,서형원
 
 ---
 
