@@ -28,7 +28,7 @@
 5. [💻 코드 실행 방법](#5--코드-실행-방법)  
 6. [📷 시연 영상/이미지](#6--시연-영상--이미지)  
 7. [🌟 기대 효과/ 한계점 및 개선점](#7--기대-효과)  
-8. [⚠️ 한계점 및 개선점](#8--한계점-및-개선점)
+
    
 &nbsp;
 ## 1. 📌 프로젝트 개요
@@ -204,7 +204,7 @@ ros2 run rokey_project feedback_node
 
 > <img width="600" height="392" alt="image" src="https://github.com/user-attachments/assets/a3af83a5-ea75-4e62-b817-4eddd1cb01de" />
 
-> <img width="600" height="100" alt="image" src="https://github.com/user-attachments/assets/bfb44ccb-1988-4563-abb9-64399405e04d" />
+> <img width="300" height="300" alt="image" src="https://github.com/user-attachments/assets/bfb44ccb-1988-4563-abb9-64399405e04d" />
 
 
 &nbsp;
@@ -214,7 +214,7 @@ ros2 run rokey_project feedback_node
 - 출퇴근 시간의 불편함 해소
 - 다양한 물품 및 센서로의 확장성 기대
 
-## ⚠️ 한계점 및 개선점
+### ⚠️ 한계점 및 개선점
 
 - 그리퍼의 중량, 가속도/속도에 따른 force 조절 미흡 → 물체 밀림 발생
 - 선반 높이 제한 → 워크스페이스 조정 필요
@@ -224,5 +224,4 @@ ros2 run rokey_project feedback_node
 
 - 백홍하,정서윤,정민섭,서형원
 
-## 📁 폴더 구조 (예시)
 
